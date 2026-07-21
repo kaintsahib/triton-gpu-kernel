@@ -1,0 +1,13 @@
+[project]
+name = "triton-deep-learning-kernels"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "Gaurav Sahib", email = "gauravinnocent41@gmail.com" }
+]
+requires-python = ">=3.12, <3.13"
+dependencies = ["torch (>=2.12.0,<3.0.0)", "triton (>=3.7.0,<4.0.0)", "numba (>=0.65.1,<0.66.0)"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
