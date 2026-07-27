@@ -1,3 +1,6 @@
+
+
+
 # Triton GPU Kernel Labs & Hardware Profiling
 
 This repository tracks my hands-on implementation of low-level, hardware-aware GPU kernels using the OpenAI Triton language compiler ecosystem.
@@ -14,11 +17,13 @@ This repository tracks my hands-on implementation of low-level, hardware-aware G
 - Developed a high-performance continuous memory elementwise vector addition kernel using OpenAI Triton.
 - Bypassed standard Python interpretation loops to interface directly with GPU streaming multiprocessors (SMs).
 - **Result**: Achieved maximum hardware memory bandwidth saturation at **146.1 GB/s** on the GTX 1650 physical silicon layer, matching PyTorch's native C++ framework performance.
+<img width="993" height="645" alt="Screenshot from 2026-07-27 13-03-16" src="https://github.com/user-attachments/assets/4c952620-7afc-4965-8c5a-9cbbea394019" />
 
 ### Lab 2: Nsight Compute Hardware Profiling (ncu)
 - Conducted a full 31-pass instrumentation profiling using NVIDIA Nsight Compute CLI (`ncu`).
 - Tracked deep hardware execution counters, memory roofline limits, and register configurations directly from the physical GPU.
 - Generated and uploaded binary profiling report (`vector_add_profile.ncu-rep`).
+- <img width="1919" height="971" alt="Screenshot from 2026-07-27 14-04-13" src="https://github.com/user-attachments/assets/79a36799-ebfa-4b7c-bfac-e8af072fe975" />
 
 ### Lab 3: Nsight Systems Telemetry Tracing (nsys)
 - Captured live application behaviors, thread execution, and framework latencies using NVIDIA Nsight Systems (`nsys`).
