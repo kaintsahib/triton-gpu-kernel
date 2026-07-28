@@ -65,10 +65,10 @@ if __name__ == '__main__':
     # 4. SAVE BACKUP AND SHOW
     # WSL2 GUI conflicts se bachne ke liye image hamesha folder mein save ho jayegi
     plt.savefig('hardware_benchmark.png')
-    print("\n✅ GRAPH SAVED: Apne folder mein 'hardware_benchmark.png' dekho!")
+    print("\n GRAPH SAVED: Apne folder mein 'hardware_benchmark.png' dekho!")
     
     try:
-        print("🖥️ Screen par popup window display karne ki koshish ho rahi hai...")
+        print(" Screen par popup window display karne ki koshish ho rahi hai...")
         plt.show()
     except Exception as e:
-        print("ℹ️ Note: WSL2 environment ke karan directly popup window block hui, par png file ready hai.")
+        print("ℹ Note: WSL2 environment ke karan directly popup window block hui, par png file ready hai.")
