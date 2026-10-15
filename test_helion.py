@@ -2,7 +2,6 @@ import torch
 import helion
 import helion.language as hl
 
-# ऑटोट्यूनर द्वारा खोजी गई बेस्ट गोल्डन कॉन्फ़िगरेशन को यहाँ पास किया गया है
 @helion.kernel(
     config=helion.Config(
         atomic_indexing=[], 
