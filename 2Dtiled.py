@@ -141,9 +141,9 @@ def triton_gemm_swizzled(a: torch.Tensor, b: torch.Tensor):
     assert a.is_contiguous() and b.is_contiguous()
     M, K = a.shape
     K, N = b.shape
-    c = torch.empty((M, N), device=a.device, dtype=torch.float16)
+    c = torch.empty((M, N), device=a.device, dtype=torch.float16)]
     
-    # Swizzled कर्नल के लिए 1D ग्रिड लॉन्च
+    # Launch 1D grid for the swizzled kernel
     grid = lambda meta: (triton.cdiv(M, meta['BLOCK_SIZE_M']) * triton.cdiv(N, meta['BLOCK_SIZE_N']), )
     
     gemm_swizzled_block_ptr_kernel[grid](
@@ -203,7 +203,7 @@ if __name__ == "__main__":
     print("⚡ Executing Industry Golden Baseline (PyTorch cuBLAS)...")
     pytorch_output = torch.matmul(a, b)
 
-    # दोनों कर्नल्स की शुद्धता की जांच
+    # Validate correctness of both Triton kernels
     baseline_match = torch.allclose(baseline_output, pytorch_output, atol=1e-2, rtol=1e-2)
     swizzled_match = torch.allclose(swizzled_output, pytorch_output, atol=1e-2, rtol=1e-2)
 
